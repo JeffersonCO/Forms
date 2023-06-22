@@ -1,31 +1,42 @@
-<div class="container">
-    <div class="row">
-        <div class="col-6">
-            <form [formGroup]="profileForm">
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Meu Formulario</h2>
+            </div>
+            <div class="col-6 mt-3">
+                <form [formGroup]="profileForm">
 
-                <label for="first-name">PRIMEIRO NOME: </label>
-                <input id="first-name" type="text" formControlName="firstName"><br><br>
+                    <label for="first-name">PRIMEIRO NOME: </label>
+                    <input id="first-name" type="text" formControlName="firstName"><br><br>
 
-                <label for="last-name">SOBRENOME: </label>
-                <input id="last-name" type="text" formControlName="lastName">
+                    <label for="last-name">SOBRENOME: </label>
+                    <input id="last-name" type="text" formControlName="lastName">
 
-                <div class="col-6" formGroupName="address">
-                    <h2>Edereço</h2>
+                    <div class="col-6 mt-5 " formGroupName="address">
+                        <h2>Endereço</h2>
 
-                    <label for="street">RUA: </label>
-                    <input id="street" type="text" formControlName="street"><br><br>
+                        <label for="street">RUA: </label>
+                        <input id="street" type="text" formControlName="street"><br><br>
 
-                    <label for="city">CIDADE: </label>
-                    <input id="city" type="text" formControlName="city"><br><br>
+                        <label for="city">CIDADE: </label>
+                        <input id="city" type="text" formControlName="city"><br><br>
 
-                    <label for="state">ESTADO: </label>
-                    <input id="state" type="text" formControlName="state"><br><br>
+                        <label for="state">ESTADO: </label>
+                        <input id="state" type="text" formControlName="state"><br><br>
 
-                    <label for="zip">CEP: </label>
-                    <input id="zip" type="text" formControlName="zip">
+                        <label for="zip">CEP: </label>
+                        <input id="zip" type="text" formControlName="zip">
+                    </div>
+                </form>
+                <div class="col-12 mt-3">
+                    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()"></form>
+                    <p style="font-size: 20px;">Complete the form to enable button.</p>
+                    <button type="submit" class="btn btn-secondary " [disabled]="!profileForm.valid">Submit</button>
                 </div>
-            </form>
-        </div>
 
+            </div>
+
+        </div>
     </div>
-</div>
+</body>

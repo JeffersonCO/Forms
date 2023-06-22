@@ -8,12 +8,7 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./formdetail.component.scss']
 })
 export class FormdetailComponent {
-    profileForm = new FormGroup({
-    firstName: new FormControl(''),
-    lastName: new FormControl(''),
-  })
-}
-export class ProfileEditorComponent {
+
   profileForm = new FormGroup({
     firstName: new FormControl(''),
     lastName: new FormControl(''),
@@ -23,5 +18,18 @@ export class ProfileEditorComponent {
       state: new FormControl(''),
       zip: new FormControl('')
     })
-  });
+  })
+  
+  constructor() {
+
+  }
+  ngOnInit(): void {
+
+  }
+  onSubmit() {
+    // TODO: Use EventEmitter with form value
+    console.warn(this.profileForm.value);
+  }
 }
+
+
