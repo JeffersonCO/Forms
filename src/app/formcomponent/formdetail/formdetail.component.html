@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <form [formGroup]="profileForm">
+
+                <label for="first-name">PRIMEIRO NOME: </label>
+                <input id="first-name" type="text" formControlName="firstName"><br><br>
+
+                <label for="last-name">SOBRENOME: </label>
+                <input id="last-name" type="text" formControlName="lastName">
+
+                <div class="col-6" formGroupName="address">
+                    <h2>Edereço</h2>
+
+                    <label for="street">RUA: </label>
+                    <input id="street" type="text" formControlName="street"><br><br>
+
+                    <label for="city">CIDADE: </label>
+                    <input id="city" type="text" formControlName="city"><br><br>
+
+                    <label for="state">ESTADO: </label>
+                    <input id="state" type="text" formControlName="state"><br><br>
+
+                    <label for="zip">CEP: </label>
+                    <input id="zip" type="text" formControlName="zip">
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
