@@ -1,3 +1,28 @@
 {
-    "registrations":[]
+  "registrations": [
+    {
+      "firstName": "JJJJJJJJJJJJJJJ",
+      "lastName": "BBBBBBBBBBBBBBB",
+      "email": "jefferson.tecmec@hotmail.com",
+      "address": {
+        "street": "Rua Vinte",
+        "city": "dghdth",
+        "state": "awgq",
+        "zip": "sghsdgh"
+      },
+      "id": 1
+    },
+    {
+      "firstName": "DDDDDDDDDDDD",
+      "lastName": "VVVVVVVVVVVV",
+      "email": "aeefasergf@dffhdsfhsh",
+      "address": {
+        "street": "DDDDDD",
+        "city": "DDDDDDD",
+        "state": "RRRRRRRR",
+        "zip": "123456789"
+      },
+      "id": 2
+    }
+  ]
 }

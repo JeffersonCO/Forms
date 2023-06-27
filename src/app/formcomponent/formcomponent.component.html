@@ -1,1 +1,29 @@
-<p>formcomponent works!</p>
+
+
+<h1>Cadastro de usuarios</h1>
+
+<h2>Lista de usuarios cadastrados</h2>
+<div class="cadastros">
+    <ol>
+    <li *ngFor="let cadastro of cadastros">
+
+       <p>Cadastro N° : {{cadastro.id}}</p>
+       <p>PRIMEIRO NOME: {{cadastro.firstName}}</p>
+       <p>SOBRENOME: {{cadastro.lastName}}</p>
+       <p>EMAIL: {{cadastro.email}}</p>
+       
+        
+
+
+        <button  type="button" routerLink="/form/{{cadastro.id}}">
+
+            Editar
+        </button>
+        <button  type="button" (click)="removerCadastro(cadastro)">
+
+            Remover
+        </button>
+    </li>
+</ol>
+<button type="button" routerLink="/form/0">Novo usuario</button><br><br>
+</div>
